@@ -7,7 +7,7 @@ it can build entire deep neural nets, making it potentially useful for education
 ## Example Usage
 
 Here is a somewhat artificial example demonstrating various supported operations:
-```
+```python
 from miniggrad.engine import Value
 
 a = Value(-4.0)
