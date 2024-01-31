@@ -111,3 +111,14 @@ class Value:
 
         out._backward = _backward
         return out
+
+    def sigmoid(self):
+        x = self.data
+        t = 1 / (1 + math.exp(-x))
+        out = Value(t, (self,), 'sigmoid')
+
+        def _backward():
+            self.grad = t - t**2
+
+        out._backward = _backward
+        return out
